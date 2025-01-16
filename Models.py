@@ -31,3 +31,16 @@ class Basket:
     def view(self):
         for i in self.products:
             print(i.info())
+    def total(self):
+        ans = 0
+        for product in self.products:
+            ans += product.amount * product.price
+        return ans
+
+    def remove(self, product_name):
+        help = []
+        for product in self.products:
+            if product.name != product_name:
+                help.append(product)
+
+        self.products = help
