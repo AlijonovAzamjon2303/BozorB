@@ -1,17 +1,27 @@
 from Models import Company, Product, Basket
 
 
-c1 = Company("apple", 1990, "stiv")
-c2 = Company("Dehqon", 2015, "siz")
-pr1 = Product("15 pro", 800, 10, c1)
-pr2 = Product("14 pro", 500, 5, c1)
-pr3 = Product("olma", 10, 100, c2)
+menu = ("1.Add\n"
+        "2.View\n"
+        "3.Remove\n"
+        "4.Total\n"
+        "5.Exit\n")
 
-b = Basket()
-b.add_product(pr1)
-b.add_product(pr2)
-b.add_product(pr3)
-b.view()
-print("\n\n")
-b.remove("olma")
-b.view()
+basket = Basket()
+while True:
+    print(menu)
+    choice = input(">> ")
+    if choice == "1":
+        name = input("name>")
+        price = int(input("price>"))
+        amount = int(input("amount>"))
+        company = Company("Company", 2000, "Company")
+        product = Product(name, price, amount, company)
+        basket.add_product(product)
+    elif choice == "2":
+        basket.view()
+    elif choice == "3":
+        name = input("O'chiriladigan name>")
+        basket.remove(name)
+    elif choice == "4":
+        print(basket.total())
