@@ -31,6 +31,7 @@ class Basket:
     def view(self):
         for i in self.products:
             print(i.info())
+
     def total(self):
         ans = 0
         for product in self.products:

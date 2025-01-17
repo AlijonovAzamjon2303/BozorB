@@ -1,13 +1,13 @@
-# Classes - Company, Product, Basket
+# Classes - PDPManagement, Student, Pupil
 
-# Company
-# attributes - name, yil, founder
+# Pupil
+# attributes - name, yil, sinf
 # methods - info()
 
-# Product
-# attributes - name, price, amount, company
+# Student
+# attributes - name, yil, kurs, fakultet
 # methods - info()
 
-# Basket
-# attributes - products
-# methods - add(), remove(), view(), total()
+# PDPManagement
+# attributes - students, pupils -> dict{}
+# methods - add_st(), add_pu(), rem_st(), rem_pu(), info_st(), info_pu()
